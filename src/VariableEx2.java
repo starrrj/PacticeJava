@@ -17,4 +17,5 @@ public class VariableEx2 {
 			
 			
 	}// main
+	
 } // end class

@@ -20,4 +20,5 @@ public class VariableEx1 {
 		System.out.println(name);
 			
 	} // main
+	
 } // end class
