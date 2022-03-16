@@ -2,26 +2,18 @@
 public class DataTypeEx1 {
 
 	public static void main(String[] args) {
-		// 문자열은 리터럴로 입력
-		char c1 = 'A'; // 문자를 직접 저장
-		char c2 = 65; // keycode ,십진수로 저장
-		char c3 = '\u0041'; // 16진수로 저장 \ u 유니코드, 거의없다. 보안솔루션
-						
-		char c4 = '가'; // 문자를 직접 저장
-		char c5 = 44032; // 십진수로 저장
-		char c6 = '\uac00'; // 16진수로 저장
-				
-		int uniCode = c1; // 유니코드 얻기 4byte => c1 = 65
-				
-		System.out.println(c1);       // A
-		System.out.println(c2);       // A
-		System.out.println(c3);       // A , 에러 -> ("C3:" + c3);
-		System.out.println(c4);       // 가
-		System.out.println(c5);       // 가
-		System.out.println(c6);       // 가
-		System.out.println(uniCode);  // 65
-				
+			
+		int intVar = 10;
+		long longVar = 10L; // int로 가정하여 넣으려고함 'L','l'을 기입한다
+			
+		float floatVar = 3.14159F; // double로 가정 'f','F' 기입한다
+		double doubleVar = 3.14159;
+		boolean isMale = false;
+			
+		char charVar1 = 'A'; // 문자하나,싱글쿼테이션
+		char charVar2 = '1'; // 숫자 -> 문자
+		char charVar3 = '한'; // 영어, 한국어, 다국어, 특수문자 가능 문자리터
 
-	}
-
-}
+		} // main
+		
+} //class
