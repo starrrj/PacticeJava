@@ -1,4 +1,4 @@
-package inetAddress;
+package ch18;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
-public class InetAdressEx2 {
+public class InetAdressEx {
 
 	public static void main(String[] args) throws UnknownHostException {
 		log.debug("main({}) invoked", Arrays.toString(args));
