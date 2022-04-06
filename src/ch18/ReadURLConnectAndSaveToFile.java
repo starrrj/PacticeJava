@@ -1,4 +1,4 @@
-package inetAddress;
+package ch18;
 
 import java.io.File;
 import java.io.FileOutputStream;
