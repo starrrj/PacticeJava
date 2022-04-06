@@ -1,4 +1,4 @@
-package inetAddress;
+package ch18;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
