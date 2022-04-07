@@ -1,4 +1,4 @@
-package ch18;
+package ch18_network;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
