@@ -1,4 +1,4 @@
-package genericEx.generic_extends_implements;
+package ch13_generic.generic_extends_implements;
 
 public class StorageImpl<T> implements Storage<T> {
 	private T[] array;

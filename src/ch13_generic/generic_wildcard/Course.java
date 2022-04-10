@@ -1,4 +1,4 @@
-package genericEx.generic_wildcard;
+package ch13_generic.generic_wildcard;
 
 
 // 제한된 타입파라미터 중, 와일드 카드(?)를 이해하기 위한 예제

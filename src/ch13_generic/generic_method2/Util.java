@@ -1,4 +1,4 @@
-package genericEx.generic_method2;
+package ch13_generic.generic_method2;
 
 
 public class Util {

@@ -1,4 +1,4 @@
-package genericEx.multi_type_parameter;
+package ch13_generic.multi_type_parameter;
 
 import lombok.NoArgsConstructor;
 

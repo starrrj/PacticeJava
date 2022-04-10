@@ -1,4 +1,4 @@
-package genericEx.generic_extends_implements;
+package ch13_generic.generic_extends_implements;
 
 import lombok.Getter;
 import lombok.Setter;

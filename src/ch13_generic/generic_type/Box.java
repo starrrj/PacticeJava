@@ -1,4 +1,4 @@
-package genericEx.generic_type;
+package ch13_generic.generic_type;
 
 
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package genericEx.generic_method;
+package ch13_generic.generic_method;
 
 
 public class BoxingMethodExample {

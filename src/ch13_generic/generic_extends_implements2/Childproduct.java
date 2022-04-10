@@ -1,4 +1,4 @@
-package genericEx.generic_extends_implements2;
+package ch13_generic.generic_extends_implements2;
 
 public class Childproduct<K,V,C> extends Product<K,V>{
 	private C company;

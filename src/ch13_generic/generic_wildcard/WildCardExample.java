@@ -1,4 +1,4 @@
-package genericEx.generic_wildcard;
+package ch13_generic.generic_wildcard;
 
 
 import java.util.Arrays;
