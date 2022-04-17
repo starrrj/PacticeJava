@@ -1,0 +1,113 @@
+********************************
+* Scoop install
+********************************
+* Package manager for MS Windows 10
+
+
+1. open Windows Powershell (꼭 관리자 권한으로 하라!)
+
+2. > Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+   
+   * Choose 'A'
+
+3. > $env:SCOOP='C:\app\scoop'   <------- 1회성 환경변수 설정
+    scoop을 설치할 top-level 폴더 설정
+
+    => 시스템환경변수로 설정 --> > sysdm.cpl > 고급 > 환경변수 > 사용자변수로 등록 <-- 영구적인 설정
+       SCOOP = C:\app\scoop
+
+4. > Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+
+   # or shorter
+   
+	> iwr -useb get.scoop.sh | iex
+
+5. 시스템 환경변수에 등록 (** 필수사항 ** - 등록하지 않으면, 명령실행시 일부 오류발생 및 메시지 출력)
+
+	> sysdm.cpl
+
+	SCOOP = C:\app\scoop
+
+6. Installed apps:
+
+  7zip 19.00 [main]
+  aria2 1.36.0-1 [main]
+  coreutils 5.97.3 [main]
+  graalvm-lts-jdk11 20.3.2 [java]
+  graalvm-lts-jdk8 20.3.2 [java]
+  gradle-bin 7.2 [main]
+  maven 3.8.3 [main]
+  netcat 1.12 [main]
+  nvm 1.1.8 [main]
+  sysinternals 2021.September.22 [extras]
+  unxutils 2007.03.01 [main]
+
+
+ 7. 추가로 bucket 을 사용하려면, 아래의 명령어로 bucket 추가
+
+  > scoop bucket add <new-bucket-name>
+
+  > scoop bucket add main    ----> default, already added.
+  > scoop bucket add extras  ----> for sysinternals
+  > scoop bucket add java    ----> for relating to JAVA.
+  > scoop bucket add versions
+
+  > scoop bucket list
+  > scoop bucket rm <bucket>
+
+8. 특정 app 을 비활성화 시킴
+
+   > scoop config aria2-enabled false
+
+9. scoop 이 사용하는 캐쉬(cache) 조작
+
+   > scoop cache
+   > scoop cache show
+
+   > scoop cache rm <cached-app-name>
+
+
+10. 여러 jdk 사이에서 switch 하기
+
+   -- Switch 8 to 11 -------------------------------
+
+   > scoop reset graalvm-lts-jdk11                                      <---------- ***
+   Resetting graalvm-lts-jdk11 (20.3.2).
+   Linking C:\app\scoop\apps\graalvm-lts-jdk11\current => C:\app\scoop\apps\graalvm-lts-jdk11\20.3.2
+   
+   > scoop info graalvm-lts-jdk11                                       <---------- ***
+   Name: graalvm-lts-jdk11
+   Description: High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)
+   Version: 20.3.2
+   Website: https://www.graalvm.org/
+   License: GPL-2.0 (https://spdx.org/licenses/GPL-2.0.html)
+   Manifest:
+     C:\app\scoop\buckets\java\bucket\graalvm-lts-jdk11.json
+   Installed:
+     C:\app\scoop\apps\graalvm-lts-jdk11\20.3.2
+   Environment:
+     GRAALVM_HOME=C:\app\scoop\apps\graalvm-lts-jdk11\current           <---------- ***
+     JAVA_HOME=C:\app\scoop\apps\graalvm-lts-jdk11\current              <---------- ***
+     PATH=%PATH%;C:\app\scoop\apps\graalvm-lts-jdk11\20.3.2\bin         <---------- ***
+
+   -- Switch 11 to 8 -------------------------------
+
+   > scoop reset graalvm-lts-jdk8                                       <---------- ***
+   Resetting graalvm-lts-jdk8 (20.3.2).
+   Linking C:\app\scoop\apps\graalvm-lts-jdk8\current => C:\app\scoop\apps\graalvm-lts-jdk8\20.3.2
+   
+   > scoop info graalvm-lts-jdk8                                        <---------- ***
+   Name: graalvm-lts-jdk8
+   Description: High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)
+   Version: 20.3.2
+   Website: https://www.graalvm.org/
+   License: GPL-2.0 (https://spdx.org/licenses/GPL-2.0.html)
+   Manifest:
+     C:\app\scoop\buckets\java\bucket\graalvm-lts-jdk8.json
+   Installed:
+     C:\app\scoop\apps\graalvm-lts-jdk8\20.3.2
+   Environment:
+     GRAALVM_HOME=C:\app\scoop\apps\graalvm-lts-jdk8\current            <---------- ***
+     JAVA_HOME=C:\app\scoop\apps\graalvm-lts-jdk8\current               <---------- ***
+     PATH=%PATH%;C:\app\scoop\apps\graalvm-lts-jdk8\20.3.2\bin          <---------- ***
+

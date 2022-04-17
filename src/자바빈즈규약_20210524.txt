@@ -1,0 +1,6 @@
+다음은 자바빈즈(JavaBeans) 클래스 규약이다. 
+
+1) private 접근제한자로 필드를 선언한다. 		(필수)
+2) getter 메소드와 setter 메소드를 갖는다. 	(필수)
+3) 기본 생성자가 반드시 존재해야 된다. 		(필수)
+4) implements Serializable					(선택)
