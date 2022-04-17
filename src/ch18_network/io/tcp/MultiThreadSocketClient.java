@@ -9,6 +9,7 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 public class MultiThreadSocketClient {
+	// 채팅서버의 연결정보 선언
 	private static final String host = "127.0.0.1"; // 서버의 주소
 	private static final int port = 7777; 			// 서버의 Listen Port
 	
