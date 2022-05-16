@@ -1,4 +1,4 @@
-package ch07_inheritance.promation;
+package ch07_inheritance.promotion;
 
 
 public class ChildExample {
