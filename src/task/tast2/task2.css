@@ -1,0 +1,92 @@
+/* 전체선택자 */
+*{
+    margin: 0 auto;              /* 위아래 여백 없이, 가로 중앙 배치 */
+    padding: 0;
+}
+
+/* 태그 선택자 */
+li{
+    list-style-type: none;       /* 모든 li태그 스타일 X */  
+}
+
+a { text-decoration:none }       /* 모든 a태그 스타일 X */ 
+
+/* class 선택자 */
+.clear{
+    clear: both;                 /* float 속성 취소 */
+}
+
+/* header */
+header{
+    width: 1000px;
+    height: 100px;
+    border-bottom: solid 1px rgb(206, 206, 206);
+}
+
+#logo{
+    float: left;                /* float 왼쪽 정렬 */
+    margin-top: 10px;
+}
+
+#top{
+    float: right;               /* float 오른쪽 정렬 */
+    margin : 40px 20px 0 0;
+}
+
+#top li{
+    display: inline;            /* list 가로 배열 */
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+/*nav*/
+nav{
+    width: 1000px;
+    height: 50px;
+}
+
+#gnb li{
+    display: inline;            /* list 가로 배열 */
+    float: left;                /* float 왼쪽 정렬 */
+    margin: 10px 0 10px 1px;
+}
+
+/* wrapper : section + aside*/
+#wrapper{
+    width: 1000px;
+    height: 245px;
+    margin-bottom: 15px;
+}
+
+/*div- section*/
+section{
+    width: 700px;               /* 전체너비 1000px에서 700px */
+    float: left;
+}
+
+/* div- aside */
+aside{
+    width: 300px;               /* 전체너비 1000px에서 300px */
+    float: left;
+}
+
+#banner li{
+    float: left;
+}
+
+/* footer */
+footer{
+    width: 1000px;
+    height: 150px;
+    border-top: solid 1px rgb(206, 206, 206);
+}
+
+#address{
+    float: left;
+    margin: 30px 0 0 50px;
+}
+
+#customer{
+    float: right;
+    margin: 20px 50px 0 0; 
+}

@@ -1,0 +1,96 @@
+head, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: '돋움';
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin: 20px 40px 30px 40px;
+    height: 80px;
+}
+
+#main-logo {
+    float: left;
+    height: 80px;
+}
+
+li {
+    display: inline;
+}
+
+#gnb {
+    float: right;
+    height: 80px;
+}
+
+#gnb ul {
+    height: 40px;
+    padding: 40px 0 0 0 ;
+    margin: 0;
+}
+
+section {
+    clear: both;
+    border-top: 1px solid lightgray;
+    text-align: center;
+    padding: 0 0px 20px 0px;
+}
+
+#contents {
+    display: inline-block;
+}
+
+#nav {
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#main-img {
+    float: left;
+    height: 266px;
+}
+
+#main-img img {
+    height: 100%;
+}
+
+#banner {
+    float: left;
+    height: 266px;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+#banner li {
+    display: block;
+}
+
+#banner img {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+    height: 120px;
+}
+
+#addr {
+    float: left;
+    margin-left: 100px;
+}
+
+#customer {
+    float: right;
+    margin-right: 100px;
+}
+
+
+

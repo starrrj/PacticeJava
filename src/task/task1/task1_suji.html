@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: '돋움';
+        }
+
+        header {
+            margin: 100px 0 10px 0;
+            border-top: 1px solid lightgray;
+            padding: 30px 0 10px 0;
+        }
+
+        #header-logo {
+            margin-left: 300px;
+            display: inline;
+        }
+
+        nav {
+            float: right;
+            margin: 0 300px 50px 0;
+            text-align: right;
+        }
+
+        #nav-sub-menus {
+            margin-bottom: 20px;
+        }
+
+        #nav-sub-menus li {
+            display: inline;
+        }
+
+        #nav-main-menus li {
+            display: inline;
+            font-size: 20px;
+            margin-left: 100px;
+        }
+
+        section {
+            margin: 10px 300px 30px 300px;
+            height: 700px;
+        }
+    
+        #side-menus {
+            float: left;
+            width: 270px;
+        }
+
+        #side-menus li {
+            list-style-type: none;
+            border-bottom: 1px dotted lightgray;
+            padding: 10px 100px 10px 15px;
+        }
+         
+        #selected {
+            background-color: #516e7e;
+            color: #88eed8;
+            font-size: 20px;
+        }
+
+        #contents {
+            float: right;
+            width: 985px;
+        }
+
+        #contents-title {
+            font-size: 20px;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        #contents-text {
+            line-height: 25px;
+        }
+
+        #contents-img {
+            display: block;
+            margin: 40px auto;
+        }
+
+        footer {
+            width: 100%;
+            padding: 50px 300px 50px 300px;
+            background-color: #2c2a29;
+        }
+
+        #footer-logo {
+            float: left;
+            margin-right: 800px;
+        }
+
+        #footer-info {
+            text-align: left;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header-logo">
+            <img src="logo.png">
+        </div>
+        
+        <nav>
+            <ul id="nav-sub-menus">
+                <li>로그인</li>
+                <li>|</li>
+                <li>회원가입</li>
+                <li>|</li>
+                <li>공지사항</li>
+            </ul>
+            
+            <p></p>
+
+            <ul id="nav-main-menus">
+                <b>
+                    <li>사진이론</li>
+                    <li>사진구도</li>
+                    <li>사진작가</li>
+                    <li>갤러리</li>
+                    <li>커뮤니티</li>
+                </b>
+            </ul>
+        </nav>
+
+        <div class="main_img">
+            <img src="main_img.png" width="100%">
+        </div>
+    </header>
+    
+    <section>
+        <div id="side-menus">
+            <ul>
+                <li id="selected"><b>사진이론</b></li>
+                <li>카메라 동작 원리</li>
+                <li>무조건 찍어보자!</li>
+                <li>피사체의 배경</li>
+                <li>조리개와 심도</li>
+                <li>카메라 촬영 모드</li>
+            </ul>
+        </div>
+
+        <div id="contents">
+            <div id="contents-title">
+                <b>카메라 동작 원리</b>
+            </div>
+            
+            <div id="contents-text">
+                DSLR 카메라에서 DSLR은 "Digital Single Lens Reflex"의 약어로써 우리말로는 디지털
+                일안 반사식 카메라을 의미합니다. DSLR은 디지털 카메라로써 카메라 내부에 들어온 빛이
+                상단의 펜타프리즘을 통하여 뷰파인더에 맺히게 되어 셔터를 누르기 전에 뷰 파인더를
+                통하여 피사체를 확인할 수 있게 됩니다.
+        
+                <img id="contents-img" src="dslr.png" alt="">
+        
+                [그림 1]은 DSLR 카메라에서 셔터를 누르기 전의 상태를 보여주는데 렌즈를 통해
+                들어오는 빛은 카메라 내부에서 다음과 같은 과정을 거치게 됩니다.<br>
+                &nbsp;① 빛이 카메라 렌즈를 통과합니다.<br>
+                &nbsp;② 빛이 반사 거울에 반사되어 위쪽으로 향합니다.<br>
+                &nbsp;③ 빛이 펜타프리즘 거울에 반사되어 뷰파인더로 향합니다.<br>
+                &nbsp;④ 들어온 빛에 의해 뷰파인터들 통하여 피사체를 볼 수 있습니다.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer-logo">
+            <img src="footer_logo.png" alt="">
+        </div>
+
+        <div id="footer-info">
+            서울시 강남구 삼성동 1234 우:123-1234<br>
+            TEL:031-123-1234 Email: email@domain.com<br>
+            COPYRIGHT (C) 루바토 ALL RIGHTS RESERVED
+        </div>
+    </footer>
+
+</body>
+
+</html>

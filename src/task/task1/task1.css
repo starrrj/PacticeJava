@@ -1,0 +1,118 @@
+/* 전체 */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+.clear {
+    clear: both;
+}
+/* header */
+header{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+#logo{
+    float: left;
+    margin: 20px 0 0 30px;
+}
+#menus{
+    float: right;
+}
+#top_menu{
+    float: right;
+    font-size: 19px;
+}
+#top_list li{
+    list-style-type: none;
+}
+#main_manu{
+    margin-top: 30px;
+    font-size: 24px;
+}
+#main_manu li{
+    display: inline; 
+    margin-left: 100px;
+}
+
+/* scetion */
+#main_img{
+    width: 100%;
+    height: 281px;
+    background-image: url("main_img.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+body{
+	font-size: 17px;
+	color: black;
+}
+#contents {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* side_bar : nav */
+#side_menu {
+    width: 280px;
+    float: left;
+    margin-top: 20px;
+}
+#side_menu h3{
+    font-size: 20px;
+    color: rgb(119, 211, 165);
+    background-color: rgb(49, 112, 117);
+    padding: 13px;
+}
+#side_menu li{
+    padding: 10px;
+    border-bottom: 1px dotted rgb(178, 178, 178);
+}
+
+/* contents */
+#main_contents{
+    width: 900px;
+    height: 750px;
+    float: right;
+    margin-top: 20px;
+}
+#main_contents h2{
+    font-size: 22px;
+    padding-bottom: 7px;
+    border-bottom: solid 1px rgb(189, 188, 188);
+}
+#sec_img {
+	margin-top: 30px;
+	text-align: center;
+}
+#main_contents p {
+    margin-top: 20px;
+	line-height: 180%;
+}
+#main_contents li {
+	padding: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #2c2a29;;
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+}
+/* #footer_groub{
+    width: 1000px;
+    margin: 0 auto;
+    border: solid 1px red;
+} */
+#foot_logo{
+    float: left;
+    margin: 50px 0 0 30px;
+}
+#imformation {
+    float: right;
+    color: white;
+    padding-right: 50px;
+}
