@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <title>ttt</title>
+    <!-- 주어진 화면을 서서히 아래로 자동으로 스크롤 시키세요
+    제이쿼리 메소드를 이용하여, 수직 스크룔바 이동
+    interval(간격주기) 타임을 100ms로 지정 -->
+    <style>
+        body {
+            height: 3000px;
+            background-image: linear-gradient(45deg, red,orange,yellow,green,blue,purple);
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>     
+    <script defer>
+        const px = 1;               // 매 주기마다 스크롤바를 이동시킬 픽셀수
+        const interval = 50;        // (간격)주기 설정(milliseconds)
+        const maxHeight = 3000;     // 브라우저 viewport 의 최대 높이 설정
+
+        // 1. 지정된 시간주기에 따라, 수직스크롤바를 움직일 이동픽셀수를 호출함수의 인자로 전달
+        const intervalId = setInterval(scrollTop, interval, px)
+
+        // 2. 웹브라우저 윈도의 스크롤바의 위치에 이동할 때 발생하는 이벤트인,
+        //    onscroll에 Event Handler 로 익명함수 설정:
+
+        // 1st. window 내장객체의 onscroll 이벤트 속성에 이벤트 핸들러 설정 (***)
+        // window.onscroll = function () {                  // 1st. method
+        //      ...
+        // };
+
+        // 2nd. window 내장객체의 이벤트 설정 메소드인 addEventListener 이용하여 이벤트 핸들러 설정
+        // window.addEventListener('scroll', function () {  // 2nd. method (***)
+        //      ...
+        // };
+
+        // 3rd. 제이쿼리의 이벤트 설정 메소드 이용 방법
+        $(window).scroll(() => {                            // 3rd. method (***)
+            console.debug(`>> current position: ${window.scrollY}`)
+
+            //----- How to detect the end of scroll bar in the web browsers. (*******)
+            if($(window).innerHeight() + $(window).scrollTop() > $("body").height()) {   // 1. 제이쿼리 메소드 이용
+            // if(window.innerHeight + window.scrollY > document.body.scrollHeight) {          // 2. 자바스크립트 내장객체 속성이용
+                clearInterval(intervalId);                  // setInterval 자원해제
+                console.debug('>>> setInterval released.')
+            } // if
+        });
+
+        // 3. window 내장객체의 scrollBy(x,y) 메소드로, 인자값만큼의 픽셀수로 수직스크롤 증분이동시킴
+        function scrollTop(pixels) {
+            window.scrollBy(0, pixels)  // 수직스크롤 증분이동
+        } // scrollTop
+
+        $(function(){
+            console.clear();
+
+            $(window).scrollTop(0);
+
+            const interval = setInterval(() => {
+                window.scrollBy(0,10);
+                console.debug(`>> current position: ${window.scrollY}`);
+
+                // window.scrollY: document가 수직으로 얼마나 스크롤됐는지 픽셀단위로 반환 (= window.pageOfoffset)
+                // window.innerHeight : 브라우저의 현재 높이(=viewport), 주소표시줄 포함X
+                // scrollY+window.innerHigth = viewport의 밑바닥 절대좌표 
+                // offsetHeight = 높이 + 테두리 + 패딩 + 수평 스크롤바 //JS
+                // clientheight = 높이 + 테두리 + 패딩  //JS
+                if((window.scrollY + window.innerHeight) >= document.body.offsetHeight) {
+                    console.debug(`>>> setInterval released.`)
+                    clearInterval(interval);
+                } // if
+            }, 100);
+        });
+
+        // offsetHeight
+        //: 테두리, 패딩 및 수평 스크롤바(렌더링된 경우)를 포함 하여 요소의 CSS 높이를 픽셀 단위로 측정한 것 
+        //
+    </script>
+</head>
+<body>
+</body>
+</html>

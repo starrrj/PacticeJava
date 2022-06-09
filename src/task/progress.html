@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <title>ttt</title>
+    <!-- 주어진 화면을 서서히 아래로 자동으로 스크롤 시키세요
+    제이쿼리 메소드를 이용하여, 수직 스크룔바 이동
+    interval(간격주기) 타임을 100ms로 지정 -->
+    <style>
+        body {
+            height: 3000px;
+            background-image: linear-gradient(45deg, red,orange,yellow,green,blue,purple);
+        }
+
+        progress{
+            position: fixed;
+            width: 900px;
+            height: 50px;
+        }
+    </style>     
+    <script>
+        $(()=>{
+            console.clear();
+            console.debug(`window.innerHeight: ${window.innerHeight}`);
+
+            let progress = window.scrollY;  // 진행상황
+
+            $('#scroll').attr({ max: document.body.offsetHeight-window.innerHeight});
+
+            const interval = setInterval(() => {
+                window.scrollBy(0,10);
+                console.debug(`>> current position: ${window.scrollY}`);
+
+                progress += 10;
+                $('#scroll').attr({ value: progress});
+
+                if((window.scrollY + window.innerHeight) >= document.body.offsetHeight) {
+                    console.log('scroll finished.')
+                    clearInterval(interval);
+                } // if
+            }, 10);
+        });
+    </script>
+</head>
+<body>
+    <progress id="scroll" value="0" max="3000"></progress>
+</body>
+</html>
