@@ -24,3 +24,4 @@ public class Java10430 {
 
 	} // main
 } // end class
+
