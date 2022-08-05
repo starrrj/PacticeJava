@@ -14,6 +14,8 @@ public class Java2739 {
 			System.out.println(num +" * " + i + " = " + num*i);
 		}// for
 		
+		sc.close();
+		
 	} // main
 	
 } // end class
