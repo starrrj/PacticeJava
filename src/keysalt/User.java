@@ -69,7 +69,7 @@ public class User {
 	
 	// DB내용 출력
 	public void get_DB() {
-		System.out.println("\n=============DB출력=============\n");
+		System.out.println("\n=============DB출력==== =========\n");
 		System.out.println(db);
 	} // get_DB
 
