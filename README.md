@@ -1,4 +1,4 @@
 # Pactice
 Config files for my GitHub profile.
 
-## SQL 예제 및 실습
+## 수업에 배운 예제 실습
